@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2021-12-09T18:13:35.989Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/96.0.4664.93 Safari/537.36" etag="_WEsC8pX5elWjhJWBtWM" version="15.9.1" type="github">
+<mxfile host="app.diagrams.net" modified="2021-12-10T20:07:50.366Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/96.0.4664.93 Safari/537.36" etag="WUwzOZriLFcha5J8uWKF" version="15.9.4" type="github">
   <diagram id="axK8gMeAClD20b6OcaOv" name="Page-1">
     <mxGraphModel dx="1342" dy="582" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -52,7 +52,7 @@
         <mxCell id="lj4pEOXGBVwXvYZLfakA-13" value="kilometrage" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;" parent="lj4pEOXGBVwXvYZLfakA-2" vertex="1">
           <mxGeometry y="180" width="140" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="lj4pEOXGBVwXvYZLfakA-85" value="kilometrage" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;" parent="lj4pEOXGBVwXvYZLfakA-2" vertex="1">
+        <mxCell id="lj4pEOXGBVwXvYZLfakA-85" value="couleur" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;" parent="lj4pEOXGBVwXvYZLfakA-2" vertex="1">
           <mxGeometry y="210" width="140" height="30" as="geometry" />
         </mxCell>
         <mxCell id="lj4pEOXGBVwXvYZLfakA-15" value="Fournisseur" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;" parent="1" vertex="1">

@@ -7,3 +7,4 @@ class ParcAutomobileParcAutomobile(models.Model):
      capacite = fields.Integer()
      localisation = fields.Text()
 
+     vehicule_ids = fields.One2many(comodel_name='parc_automobile.vehicule', inverse_name='parc_id')

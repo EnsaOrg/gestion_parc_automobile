@@ -5,3 +5,5 @@ class ParcAutomobileTrajet(models.Model):
 
      isRecurrent = fields.Boolean()
      distance = fields.Integer()
+
+     ordreMission_ids = fields.One2many(comodel_name='parc_automobile.ordreMission', inverse_name='trajet_id')

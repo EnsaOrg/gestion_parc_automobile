@@ -9,3 +9,5 @@ class ParcAutomobileFournisseur(models.Model):
      date_enregistrement = fields.Date('Date enregistrement')
      adresse = fields.Char('Adresse')
      type =  fields.Selection([('concessionnaire','Concessionnaire'),('agence de location','Agence de location')])
+
+     acquisition_ids = fields.One2many(comodel_name='parc_automobile.acquisition', inverse_name='fournisseur_id')

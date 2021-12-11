@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2021-12-11T13:04:13.999Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/96.0.4664.93 Safari/537.36" etag="z4WIUv_9NLca6qTcKJkH" version="15.9.4" type="github">
+<mxfile host="app.diagrams.net" modified="2021-12-11T13:48:58.991Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/96.0.4664.93 Safari/537.36" etag="mAy8pTAX2SojweOLzP7_" version="15.9.4" type="github">
   <diagram id="axK8gMeAClD20b6OcaOv" name="Page-1">
     <mxGraphModel dx="1342" dy="582" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -214,10 +214,10 @@
         <mxCell id="lj4pEOXGBVwXvYZLfakA-86" value="Assurance" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;" parent="1" vertex="1">
           <mxGeometry x="660" y="710" width="140" height="180" as="geometry" />
         </mxCell>
-        <mxCell id="lj4pEOXGBVwXvYZLfakA-87" value="numAssurance" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;" parent="lj4pEOXGBVwXvYZLfakA-86" vertex="1">
+        <mxCell id="lj4pEOXGBVwXvYZLfakA-87" value="nomAssurance" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;" parent="lj4pEOXGBVwXvYZLfakA-86" vertex="1">
           <mxGeometry y="30" width="140" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="lj4pEOXGBVwXvYZLfakA-88" value="nomAgence" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;" parent="lj4pEOXGBVwXvYZLfakA-86" vertex="1">
+        <mxCell id="lj4pEOXGBVwXvYZLfakA-88" value="numAgence" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;" parent="lj4pEOXGBVwXvYZLfakA-86" vertex="1">
           <mxGeometry y="60" width="140" height="30" as="geometry" />
         </mxCell>
         <mxCell id="lj4pEOXGBVwXvYZLfakA-89" value="dateDébut" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;" parent="lj4pEOXGBVwXvYZLfakA-86" vertex="1">

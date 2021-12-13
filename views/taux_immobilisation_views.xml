@@ -46,11 +46,11 @@
 
     <!-- menu categories -->
 
-    <menuitem name="Taux immobilisation" id="parc_automobile_taux_immobilisation_cat" parent="parc_automobile.menu_root"/>
+<!--    <menuitem name="Taux immobilisation" id="parc_automobile_taux_immobilisation_cat" parent="parc_automobile.menu_root"/>-->
 
     <!-- actions -->
 
-    <menuitem name="List of taux_immobilisations" id="parc_automobile_taux_immobilisation_list" parent="parc_automobile_taux_immobilisation_cat"
+    <menuitem name="Taux d'immobilisation" id="parc_automobile_taux_immobilisation_list" parent="parc_automobile_entretien_cat"
               action="taux_immobilisation_action_window"/>
 <!--    <menuitem name="Server to list" id="parc_automobile" parent="parc_automobile.menu_2"-->
 <!--              action="parc_automobile.action_server"/>-->

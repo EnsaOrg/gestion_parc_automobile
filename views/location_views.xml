@@ -44,11 +44,11 @@
 
     <!-- menu categories -->
 
-    <menuitem name="Location" id="parc_automobile_location_cat" parent="parc_automobile.menu_root"/>
+<!--    <menuitem name="Location" id="parc_automobile_location_cat" parent="parc_automobile.menu_root"/>-->
 
     <!-- actions -->
 
-    <menuitem name="List of locations" id="parc_automobile_location_list" parent="parc_automobile_location_cat"
+    <menuitem name="Les locations" id="parc_automobile_location_list" parent="parc_automobile_achat_cat"
               action="location_action_window"/>
 <!--    <menuitem name="Server to list" id="parc_automobile" parent="parc_automobile.menu_2"-->
 <!--              action="parc_automobile.action_server"/>-->

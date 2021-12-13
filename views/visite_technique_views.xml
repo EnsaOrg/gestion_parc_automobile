@@ -46,11 +46,11 @@
 
     <!-- menu categories -->
 
-    <menuitem name="Visite technique" id="parc_automobile_visite_technique_cat" parent="parc_automobile.menu_root"/>
+<!--    <menuitem name="Visite technique" id="parc_automobile_visite_technique_cat" parent="parc_automobile.menu_root"/>-->
 
     <!-- actions -->
 
-    <menuitem name="List of visite_techniques" id="parc_automobile_visite_technique_list" parent="parc_automobile_visite_technique_cat"
+    <menuitem name="Les visites techniques" id="parc_automobile_visite_technique_list" parent="parc_automobile_entretien_cat"
               action="visite_technique_action_window"/>
 <!--    <menuitem name="Server to list" id="parc_automobile" parent="parc_automobile.menu_2"-->
 <!--              action="parc_automobile.action_server"/>-->

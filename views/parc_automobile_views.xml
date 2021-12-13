@@ -46,7 +46,7 @@
 
     <!-- actions -->
 
-    <menuitem name="List of parc_automobiles" id="parc_automobile_parc_automobile_list" parent="parc_automobile_parc_automobile_cat"
+    <menuitem name="Les parcs" id="parc_automobile_parc_automobile_list" parent="parc_automobile_parc_automobile_cat"
               action="parc_automobile_action_window"/>
 <!--    <menuitem name="Server to list" id="parc_automobile" parent="parc_automobile.menu_2"-->
 <!--              action="parc_automobile.action_server"/>-->

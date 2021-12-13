@@ -42,11 +42,11 @@
 
     <!-- menu categories -->
 
-    <menuitem name="Achat" id="parc_automobile_achat_cat" parent="parc_automobile.menu_root"/>
+    <menuitem name="Acquisitions" id="parc_automobile_achat_cat" parent="parc_automobile.menu_root"/>
 
     <!-- actions -->
 
-    <menuitem name="List of achats" id="parc_automobile_achat_list" parent="parc_automobile_achat_cat"
+    <menuitem name="Les achats" id="parc_automobile_achat_list" parent="parc_automobile_achat_cat"
               action="achat_action_window"/>
 <!--    <menuitem name="Server to list" id="parc_automobile" parent="parc_automobile.menu_2"-->
 <!--              action="parc_automobile.action_server"/>-->

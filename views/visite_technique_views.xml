@@ -1,0 +1,59 @@
+<odoo>
+  <data>
+    <!-- explicit list view definition -->
+    <record model="ir.ui.view" id="visite_technique_list_view">
+      <field name="name">Intervention list</field>
+      <field name="model">parc_automobile.visite_technique</field>
+      <field name="arch" type="xml">
+        <tree>
+          <field name="date"/>
+          <field name="montant_frais"/>
+          <field name="prestataire"/>
+          <field name="duree"/>
+          <field name="certificat"/>
+        </tree>
+      </field>
+    </record>
+
+    <!-- explicit form view definition -->
+    <record model="ir.ui.view" id="visite_technique_form_view">
+      <field name="name">Visite technique Form</field>
+      <field name="model">parc_automobile.visite_technique</field>
+      <field name="arch" type="xml">
+        <form>
+          <group>
+            <field name="date"/>
+            <field name="montant_frais"/>
+            <field name="prestataire"/>
+            <field name="duree"/>
+            <field name="certificat"/>
+          </group>
+        </form>
+      </field>
+    </record>
+
+    <!-- actions opening views on models -->
+
+    <record model="ir.actions.act_window" id="visite_technique_action_window">
+      <field name="name">Visite technique Window</field>
+      <field name="res_model">parc_automobile.visite_technique</field>
+      <field name="view_mode">tree,form</field>
+    </record>
+
+    <!-- Top menu item -->
+
+    <menuitem name="Parc Automobile" id="parc_automobile.menu_root"/>
+
+    <!-- menu categories -->
+
+    <menuitem name="Visite technique" id="parc_automobile_visite_technique_cat" parent="parc_automobile.menu_root"/>
+
+    <!-- actions -->
+
+    <menuitem name="List of visite_techniques" id="parc_automobile_visite_technique_list" parent="parc_automobile_visite_technique_cat"
+              action="visite_technique_action_window"/>
+<!--    <menuitem name="Server to list" id="parc_automobile" parent="parc_automobile.menu_2"-->
+<!--              action="parc_automobile.action_server"/>-->
+
+  </data>
+</odoo>

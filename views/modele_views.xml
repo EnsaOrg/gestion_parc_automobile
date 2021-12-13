@@ -1,0 +1,75 @@
+<odoo>
+  <data>
+    <!-- explicit list view definition -->
+    <record model="ir.ui.view" id="modele_list_view">
+      <field name="name">Modele list</field>
+      <field name="model">parc_automobile.modele</field>
+      <field name="arch" type="xml">
+        <tree>
+          <field name="version"/>
+          <field name="puissance"/>
+          <field name="energie"/>
+          <field name="nbr_place"/>
+          <field name="nbr_porte"/>
+          <field name="vitesse_maximale"/>
+          <field name="consommation_moyenne"/>
+          <field name="capacite_coffre"/>
+          <field name="sexe"/>
+          <field name="longueur"/>
+          <field name="largeur"/>
+          <field name="hauteur"/>
+          <field name="confort"/>
+        </tree>
+      </field>
+    </record>
+
+    <!-- explicit form view definition -->
+    <record model="ir.ui.view" id="modele_form_view">
+      <field name="name">Modele Form</field>
+      <field name="model">parc_automobile.modele</field>
+      <field name="arch" type="xml">
+        <form>
+          <group>
+            <field name="version"/>
+            <field name="puissance"/>
+            <field name="energie"/>
+            <field name="nbr_place"/>
+            <field name="nbr_porte"/>
+            <field name="vitesse_maximale"/>
+            <field name="consommation_moyenne"/>
+            <field name="capacite_coffre"/>
+            <field name="sexe"/>
+            <field name="longueur"/>
+            <field name="largeur"/>
+            <field name="hauteur"/>
+            <field name="confort"/>
+          </group>
+        </form>
+      </field>
+    </record>
+
+    <!-- actions opening views on models -->
+
+    <record model="ir.actions.act_window" id="modele_action_window">
+      <field name="name">Modele Window</field>
+      <field name="res_model">parc_automobile.modele</field>
+      <field name="view_mode">tree,form</field>
+    </record>
+
+    <!-- Top menu item -->
+
+    <menuitem name="Parc Automobile" id="parc_automobile.menu_root"/>
+
+    <!-- menu categories -->
+
+    <menuitem name="Modele" id="parc_automobile_modele_cat" parent="parc_automobile.menu_root"/>
+
+    <!-- actions -->
+
+    <menuitem name="List of modeles" id="parc_automobile_modele_list" parent="parc_automobile_modele_cat"
+              action="modele_action_window"/>
+<!--    <menuitem name="Server to list" id="parc_automobile" parent="parc_automobile.menu_2"-->
+<!--              action="parc_automobile.action_server"/>-->
+
+  </data>
+</odoo>

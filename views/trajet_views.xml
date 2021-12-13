@@ -1,0 +1,53 @@
+<odoo>
+  <data>
+    <!-- explicit list view definition -->
+    <record model="ir.ui.view" id="trajet_list_view">
+      <field name="name">Trajet list</field>
+      <field name="model">parc_automobile.trajet</field>
+      <field name="arch" type="xml">
+        <tree>
+          <field name="isRecurrent"/>
+          <field name="distance"/>
+        </tree>
+      </field>
+    </record>
+
+    <!-- explicit form view definition -->
+    <record model="ir.ui.view" id="trajet_form_view">
+      <field name="name">Trajet Form</field>
+      <field name="model">parc_automobile.trajet</field>
+      <field name="arch" type="xml">
+        <form>
+          <group>
+            <field name="isRecurrent"/>
+            <field name="distance"/>
+          </group>
+        </form>
+      </field>
+    </record>
+
+    <!-- actions opening views on models -->
+
+    <record model="ir.actions.act_window" id="trajet_action_window">
+      <field name="name">Trajet Window</field>
+      <field name="res_model">parc_automobile.trajet</field>
+      <field name="view_mode">tree,form</field>
+    </record>
+
+    <!-- Top menu item -->
+
+    <menuitem name="Parc Automobile" id="parc_automobile.menu_root"/>
+
+    <!-- menu categories -->
+
+    <menuitem name="Trajet" id="parc_automobile_trajet_cat" parent="parc_automobile.menu_root"/>
+
+    <!-- actions -->
+
+    <menuitem name="List of trajets" id="parc_automobile_trajet_list" parent="parc_automobile_trajet_cat"
+              action="trajet_action_window"/>
+<!--    <menuitem name="Server to list" id="parc_automobile" parent="parc_automobile.menu_2"-->
+<!--              action="parc_automobile.action_server"/>-->
+
+  </data>
+</odoo>

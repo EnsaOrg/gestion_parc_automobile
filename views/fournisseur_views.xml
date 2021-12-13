@@ -1,0 +1,57 @@
+<odoo>
+  <data>
+    <!-- explicit list view definition -->
+    <record model="ir.ui.view" id="fournisseur_list_view">
+      <field name="name">Fournisseur list</field>
+      <field name="model">parc_automobile.fournisseur</field>
+      <field name="arch" type="xml">
+        <tree>
+          <field name="registre_commerce"/>
+          <field name="date_enregistrement"/>
+          <field name="adresse"/>
+          <field name="type"/>
+        </tree>
+      </field>
+    </record>
+
+    <!-- explicit form view definition -->
+    <record model="ir.ui.view" id="fournisseur_form_view">
+      <field name="name">Fournisseur Form</field>
+      <field name="model">parc_automobile.fournisseur</field>
+      <field name="arch" type="xml">
+        <form>
+          <group>
+            <field name="registre_commerce"/>
+            <field name="date_enregistrement"/>
+            <field name="adresse"/>
+            <field name="type"/>
+          </group>
+        </form>
+      </field>
+    </record>
+
+    <!-- actions opening views on models -->
+
+    <record model="ir.actions.act_window" id="fournisseur_action_window">
+      <field name="name">Fournisseur Window</field>
+      <field name="res_model">parc_automobile.fournisseur</field>
+      <field name="view_mode">tree,form</field>
+    </record>
+
+    <!-- Top menu item -->
+
+    <menuitem name="Parc Automobile" id="parc_automobile.menu_root"/>
+
+    <!-- menu categories -->
+
+    <menuitem name="Fournisseur" id="parc_automobile_fournisseur_cat" parent="parc_automobile.menu_root"/>
+
+    <!-- actions -->
+
+    <menuitem name="List of fournisseurs" id="parc_automobile_fournisseur_list" parent="parc_automobile_fournisseur_cat"
+              action="fournisseur_action_window"/>
+<!--    <menuitem name="Server to list" id="parc_automobile" parent="parc_automobile.menu_2"-->
+<!--              action="parc_automobile.action_server"/>-->
+
+  </data>
+</odoo>

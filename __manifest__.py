@@ -25,8 +25,24 @@
     # always loaded
     'data': [
         # 'security/ir.model.access.csv',
-        'views/views.xml',
-        'views/templates.xml',
+        'views/vehicule_views.xml',
+        'views/modele_views.xml',
+        'views/marque_views.xml',
+        'views/assurance_views.xml',
+        'views/parc_automobile_views.xml',
+        'views/achat_views.xml',
+        'views/acquisition_views.xml',
+        'views/assurance_views.xml',
+        'views/conducteur_views.xml',
+        'views/entretien_views.xml',
+        'views/fournisseur_views.xml',
+        'views/intervention_views.xml',
+        'views/location_views.xml',
+        'views/ordre_mission_views.xml',
+        'views/parc_automobile_views.xml',
+        'views/taux_immobilisation_views.xml',
+        'views/trajet_views.xml',
+        'views/visite_technique_views.xml',
     ],
     # only loaded in demonstration mode
     'demo': [

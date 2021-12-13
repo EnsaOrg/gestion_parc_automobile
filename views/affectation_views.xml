@@ -1,0 +1,63 @@
+<odoo>
+  <data>
+    <!-- explicit list view definition -->
+    <record model="ir.ui.view" id="affectation_list_view">
+      <field name="name">Affectation list</field>
+      <field name="model">parc_automobile.affectation</field>
+      <field name="arch" type="xml">
+        <tree>
+          <field name="date_debut"/>
+          <field name="date_fin_prevue"/>
+          <field name="date_fin_reelle"/>
+          <field name="activite"/>
+          <field name="region"/>
+          <field name="secteur"/>
+          <field name="direction"/>
+        </tree>
+      </field>
+    </record>
+
+    <!-- explicit form view definition -->
+    <record model="ir.ui.view" id="affectation_form_view">
+      <field name="name">Affectation Form</field>
+      <field name="model">parc_automobile.affectation</field>
+      <field name="arch" type="xml">
+        <form>
+          <group>
+            <field name="date_debut"/>
+            <field name="date_fin_prevue"/>
+            <field name="date_fin_reelle"/>
+            <field name="activite"/>
+            <field name="region"/>
+            <field name="secteur"/>
+            <field name="direction"/>
+          </group>
+        </form>
+      </field>
+    </record>
+
+    <!-- actions opening views on models -->
+
+    <record model="ir.actions.act_window" id="affectation_action_window">
+      <field name="name">Affectation Window</field>
+      <field name="res_model">parc_automobile.affectation</field>
+      <field name="view_mode">tree,form</field>
+    </record>
+
+    <!-- Top menu item -->
+
+    <menuitem name="Parc Automobile" id="parc_automobile.menu_root"/>
+
+    <!-- menu categories -->
+
+    <menuitem name="Affectation" id="parc_automobile_affectation_cat" parent="parc_automobile.menu_root"/>
+
+    <!-- actions -->
+
+    <menuitem name="List of affectations" id="parc_automobile_affectation_list" parent="parc_automobile_affectation_cat"
+              action="affectation_action_window"/>
+<!--    <menuitem name="Server to list" id="parc_automobile" parent="parc_automobile.menu_2"-->
+<!--              action="parc_automobile.action_server"/>-->
+
+  </data>
+</odoo>

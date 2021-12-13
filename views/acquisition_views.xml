@@ -1,0 +1,55 @@
+<odoo>
+  <data>
+    <!-- explicit list view definition -->
+    <record model="ir.ui.view" id="acquisition_list_view">
+      <field name="name">Acquisition list</field>
+      <field name="model">parc_automobile.acquisition</field>
+      <field name="arch" type="xml">
+        <tree>
+          <field name="date"/>
+          <field name="montant"/>
+          <field name="motif"/>
+        </tree>
+      </field>
+    </record>
+
+    <!-- explicit form view definition -->
+    <record model="ir.ui.view" id="acquisition_form_view">
+      <field name="name">Acquisition Form</field>
+      <field name="model">parc_automobile.acquisition</field>
+      <field name="arch" type="xml">
+        <form>
+          <group>
+            <field name="date"/>
+            <field name="montant"/>
+            <field name="motif"/>
+          </group>
+        </form>
+      </field>
+    </record>
+
+    <!-- actions opening views on models -->
+
+    <record model="ir.actions.act_window" id="acquisition_action_window">
+      <field name="name">Acquisition Window</field>
+      <field name="res_model">parc_automobile.acquisition</field>
+      <field name="view_mode">tree,form</field>
+    </record>
+
+    <!-- Top menu item -->
+
+    <menuitem name="Parc Automobile" id="parc_automobile.menu_root"/>
+
+    <!-- menu categories -->
+
+    <menuitem name="Acquisition" id="parc_automobile_acquisition_cat" parent="parc_automobile.menu_root"/>
+
+    <!-- actions -->
+
+    <menuitem name="List of acquisitions" id="parc_automobile_acquisition_list" parent="parc_automobile_acquisition_cat"
+              action="acquisition_action_window"/>
+<!--    <menuitem name="Server to list" id="parc_automobile" parent="parc_automobile.menu_2"-->
+<!--              action="parc_automobile.action_server"/>-->
+
+  </data>
+</odoo>

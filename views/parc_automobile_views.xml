@@ -1,0 +1,55 @@
+<odoo>
+  <data>
+    <!-- explicit list view definition -->
+    <record model="ir.ui.view" id="parc_automobile_list_view">
+      <field name="name">Vehicule list</field>
+      <field name="model">parc_automobile.parc_automobile</field>
+      <field name="arch" type="xml">
+        <tree>
+          <field name="num_parc"/>
+          <field name="capacite"/>
+          <field name="localisation"/>
+        </tree>
+      </field>
+    </record>
+
+    <!-- explicit form view definition -->
+    <record model="ir.ui.view" id="parc_automobile_form_view">
+      <field name="name">Parc automobile Form</field>
+      <field name="model">parc_automobile.parc_automobile</field>
+      <field name="arch" type="xml">
+        <form>
+          <group>
+            <field name="num_parc"/>
+            <field name="capacite"/>
+            <field name="localisation"/>
+          </group>
+        </form>
+      </field>
+    </record>
+
+    <!-- actions opening views on models -->
+
+    <record model="ir.actions.act_window" id="parc_automobile_action_window">
+      <field name="name">Parc automobile Window</field>
+      <field name="res_model">parc_automobile.parc_automobile</field>
+      <field name="view_mode">tree,form</field>
+    </record>
+
+    <!-- Top menu item -->
+
+    <menuitem name="Parc Automobile" id="parc_automobile.menu_root"/>
+
+    <!-- menu categories -->
+
+    <menuitem name="Parc automobile" id="parc_automobile_parc_automobile_cat" parent="parc_automobile.menu_root"/>
+
+    <!-- actions -->
+
+    <menuitem name="List of parc_automobiles" id="parc_automobile_parc_automobile_list" parent="parc_automobile_parc_automobile_cat"
+              action="parc_automobile_action_window"/>
+<!--    <menuitem name="Server to list" id="parc_automobile" parent="parc_automobile.menu_2"-->
+<!--              action="parc_automobile.action_server"/>-->
+
+  </data>
+</odoo>

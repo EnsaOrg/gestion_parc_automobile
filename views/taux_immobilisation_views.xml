@@ -1,0 +1,59 @@
+<odoo>
+  <data>
+    <!-- explicit list view definition -->
+    <record model="ir.ui.view" id="taux_immobilisation_list_view">
+      <field name="name">Taux immobilisation list</field>
+      <field name="model">parc_automobile.taux_immobilisation</field>
+      <field name="arch" type="xml">
+        <tree>
+          <field name="date"/>
+          <field name="montant_frais"/>
+          <field name="prestataire"/>
+          <field name="duree"/>
+          <field name="nbr_heure"/>
+        </tree>
+      </field>
+    </record>
+
+    <!-- explicit form view definition -->
+    <record model="ir.ui.view" id="taux_immobilisation_form_view">
+      <field name="name">Taux immobilisation Form</field>
+      <field name="model">parc_automobile.taux_immobilisation</field>
+      <field name="arch" type="xml">
+        <form>
+          <group>
+            <field name="date"/>
+            <field name="montant_frais"/>
+            <field name="prestataire"/>
+            <field name="duree"/>
+            <field name="nbr_heure"/>
+          </group>
+        </form>
+      </field>
+    </record>
+
+    <!-- actions opening views on models -->
+
+    <record model="ir.actions.act_window" id="taux_immobilisation_action_window">
+      <field name="name">Taux immobilisation Window</field>
+      <field name="res_model">parc_automobile.taux_immobilisation</field>
+      <field name="view_mode">tree,form</field>
+    </record>
+
+    <!-- Top menu item -->
+
+    <menuitem name="Parc Automobile" id="parc_automobile.menu_root"/>
+
+    <!-- menu categories -->
+
+    <menuitem name="Taux immobilisation" id="parc_automobile_taux_immobilisation_cat" parent="parc_automobile.menu_root"/>
+
+    <!-- actions -->
+
+    <menuitem name="List of taux_immobilisations" id="parc_automobile_taux_immobilisation_list" parent="parc_automobile_taux_immobilisation_cat"
+              action="taux_immobilisation_action_window"/>
+<!--    <menuitem name="Server to list" id="parc_automobile" parent="parc_automobile.menu_2"-->
+<!--              action="parc_automobile.action_server"/>-->
+
+  </data>
+</odoo>

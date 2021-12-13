@@ -1,7 +1,7 @@
 from odoo import models, fields, api
 
 class ParcAutomobileOrdreMission(models.Model):
-     _name = 'parc_automobile.ordreMission'
+     _name = 'parc_automobile.ordre_mission'
 
      autorisation = fields.Integer()
      permanence = fields.Boolean()

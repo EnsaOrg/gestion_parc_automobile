@@ -10,5 +10,5 @@ class ParcAutomobileMarque(models.Model):
                               ('carrosserie liftback','Carrosserie Liftback'),('cabriolet','Cabriolet'),('minibus','Minibus'),
                               ('autobus', 'Autobus'),('roadsters','Roadsters'),('targa','Targa'),])
 
-     vehicule_ids = fields.One2many(comodel_name='parc_automobile.vehicule', inverse_name='marque_id')
-     modele_ids = fields.One2many(comodel_name='parc_automobile.modele', inverse_name='marque_id')
+     #vehicule_ids = fields.One2many(comodel_name='parc_automobile.vehicule', inverse_name='marque_id')
+     #modele_ids = fields.One2many(comodel_name='parc_automobile.modele', inverse_name='marque_id')

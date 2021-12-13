@@ -16,7 +16,7 @@ class ParcAutomobileConducteur(models.Model):
      ordre = fields.Selection([('principal','Principal'),('secondaire','Secondaire')])
      validite_permis = fields.Date('Date d\'expiration')
 
-     conducteur_ids = fields.Many2many(comodel_name='university.conducteur',
-                                        relation='conducteur_affectation_rel',
-                                        column1='matricule',
-                                        column2='date_debut')
+     # conducteur_ids = fields.Many2many(comodel_name='university.conducteur',
+     #                                    relation='conducteur_affectation_rel',
+     #                                    column1='matricule',
+     #                                    column2='date_debut')

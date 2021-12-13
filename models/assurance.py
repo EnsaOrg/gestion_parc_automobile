@@ -9,4 +9,4 @@ class ParcAutomobileAssurance(models.Model):
      date_fin = fields.Date('Date de fin')
      prime_totale = fields.Float()
 
-     vehicule_ids = fields.One2many(comodel_name='parc_automobile.vehicule', inverse_name='assurance_id')
+     #vehicule_ids = fields.One2many(comodel_name='parc_automobile.vehicule', inverse_name='assurance_id')

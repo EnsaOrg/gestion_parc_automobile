@@ -2,6 +2,7 @@ from odoo import models, fields, api
 
 class ParcAutomobileMarque(models.Model):
      _name = 'parc_automobile.marque'
+     _rec_name = 'nom'
 
      nom = fields.Char('Marque')
      type = fields.Selection([('coupé','Coupé'),('berline','Berline'),('hayon','Hayon'),('break','Break'),

@@ -23,6 +23,6 @@ class ParcAutomobileAffectation(models.Model):
      def name_get(self):
          result = []
          for affectation in self:
-             name = '[Date: ' + affectation.date_debut + ' - Activité: ' + affectation.activite + ']'
+             name = '[Date: ' + str(affectation.date_debut) + ' - Activité: ' + str(affectation.vehicule_id.matricule) + ']'
              result.append((affectation.id, name))
          return result

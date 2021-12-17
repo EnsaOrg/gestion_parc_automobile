@@ -2,6 +2,7 @@ from odoo import models, fields, api
 
 class ParcAutomobileAssurance(models.Model):
      _name = 'parc_automobile.assurance'
+     _rec_name = 'nom_assurance'
 
      nom_assurance = fields.Char('Nom de l\'assurance')
      num_agence = fields.Integer()

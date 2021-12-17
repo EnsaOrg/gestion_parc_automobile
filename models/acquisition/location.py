@@ -7,8 +7,16 @@ class ParcAutomobileLocation(models.Model):
 
      date = fields.Date('Date d\'acquisition')
      montant = fields.Float()
-     motif = fields.Text('Address')
+     motif = fields.Text('Motif')
      #durée en heure
      duree = fields.Integer()
 
      fournisseur_id = fields.Many2one(comodel_name='parc_automobile.fournisseur', delegate=True, required=True)
+
+     @api.multi
+     def name_get(self):
+          result = []
+          for location in self:
+               name = '[Date: ' + location.date + ' - Motif: ' + location.motif + ']'
+               result.append((location.id, name))
+          return result

@@ -12,3 +12,11 @@ class ParcAutomobileOrdreMission(models.Model):
 
      trajet_id = fields.Many2one(comodel_name='parc_automobile.trajet', delegate=True)
      affectation_id = fields.Many2one(comodel_name='parc_automobile.affectation', delegate=True)
+
+     @api.multi
+     def name_get(self):
+          result = []
+          for ordre in self:
+               name = '[Autorisation: ' + str(ordre.autorisation) + ' - Activité: ' + str(ordre.activite) + ']'
+               result.append((ordre.id, name))
+          return result

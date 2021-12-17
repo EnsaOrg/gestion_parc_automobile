@@ -11,3 +11,11 @@ class ParcAutomobileFournisseur(models.Model):
      #acquisition_ids = fields.One2many(comodel_name='parc_automobile.acquisition', inverse_name='rel_id')
      achat_ids = fields.One2many(comodel_name='parc_automobile.achat', inverse_name='fournisseur_id')
      location_ids = fields.One2many(comodel_name='parc_automobile.location', inverse_name='fournisseur_id')
+
+     @api.multi
+     def name_get(self):
+          result = []
+          for fournisseur in self:
+               name = '[Régistre de commerce: ' + fournisseur.registre_commerce + ' - Type: ' + fournisseur.type + ']'
+               result.append((fournisseur.id, name))
+          return result

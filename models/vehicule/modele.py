@@ -21,3 +21,14 @@ class ParcAutomobileModele(models.Model):
      confort = fields.Selection([('faible','faible'),('moyen','Moyen'),('luxe','Luxe')])
 
      marque_id = fields.Many2one(comodel_name='parc_automobile.marque', delegate=True, required=True)
+
+     vehicule_ids = fields.One2many(comodel_name='parc_automobile.vehicule', inverse_name='marque_id')
+
+     @api.multi
+     def name_get(self):
+          result = []
+          for modele in self:
+               name = '[Version: ' + str(modele.marque_id.nom) + ' - Marque: ' + str(modele.version) + ']'
+               result.append((modele.id, name))
+
+          return result

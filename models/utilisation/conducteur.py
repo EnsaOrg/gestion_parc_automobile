@@ -20,3 +20,11 @@ class ParcAutomobileConducteur(models.Model):
                                         relation='affectation_conducteur_rel',
                                         column1='date_debut',
                                         column2='matricule')
+
+     @api.multi
+     def name_get(self):
+         result = []
+         for conducteur in self:
+             name = '[Prénom: ' + conducteur.prenom + ' - Nom: ' + conducteur.nom + ']'
+             result.append((conducteur.id, name))
+         return result

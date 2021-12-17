@@ -8,3 +8,12 @@ class ParcAutomobileParcAutomobile(models.Model):
      localisation = fields.Text()
 
      vehicule_ids = fields.One2many(comodel_name='parc_automobile.vehicule', inverse_name='parc_id')
+
+     @api.multi
+     def name_get(self):
+          result = []
+          for parc in self:
+               name = '[N° Parc: ' + str(parc.num_parc) + ' - Localisation: ' + str(parc.localisation)+']'
+               result.append((parc.id, name))
+
+          return result

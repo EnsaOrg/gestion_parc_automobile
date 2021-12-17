@@ -13,3 +13,11 @@ class ParcAutomobileVisiteTechnique(models.Model):
      certificat = fields.Selection([('a', 'A'), ('s', 'S')])
 
      vehicule_id = fields.Many2one(comodel_name='parc_automobile.vehicule', delegate=True, required=True)
+
+     @api.multi
+     def name_get(self):
+          result = []
+          for visite in self:
+               name = '[Prestataire: ' + str(visite.prestataire) + ' - Véhicule: ' + str(visite.vehicule_id.matricule) + ']'
+               result.append((visite.id, name))
+          return result

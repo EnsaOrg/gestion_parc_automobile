@@ -12,6 +12,9 @@
           <field name="date_reforme"/>
           <field name="kilometrage"/>
           <field name="couleur"/>
+          <field name="marque"/>
+          <field name="parc"/>
+          <field name="assurance"/>
         </tree>
       </field>
     </record>
@@ -29,6 +32,9 @@
             <field name="date_reforme"/>
             <field name="kilometrage"/>
             <field name="couleur"/>
+            <field name="marque"/>
+            <field name="parc"/>
+            <field name="assurance"/>
           </group>
         </form>
       </field>

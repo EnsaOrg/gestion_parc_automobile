@@ -11,6 +11,8 @@
           <field name="deplacement"/>
           <field name="pointage"/>
           <field name="activite"/>
+          <field name="trajet_id"/>
+          <field name="affectation_id"/>
         </tree>
       </field>
     </record>
@@ -27,6 +29,8 @@
             <field name="deplacement"/>
             <field name="pointage"/>
             <field name="activite"/>
+            <field name="trajet_id"/>
+            <field name="affectation_id"/>
           </group>
         </form>
       </field>

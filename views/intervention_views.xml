@@ -10,6 +10,7 @@
           <field name="montant_frais"/>
           <field name="prestataire"/>
           <field name="duree"/>
+          <field name="vehicule_id"/>
         </tree>
       </field>
     </record>
@@ -25,6 +26,7 @@
             <field name="montant_frais"/>
             <field name="prestataire"/>
             <field name="duree"/>
+            <field name="vehicule_id"/>
           </group>
         </form>
       </field>

@@ -19,6 +19,7 @@
           <field name="largeur"/>
           <field name="hauteur"/>
           <field name="confort"/>
+          <field name="marque_id"/>
         </tree>
       </field>
     </record>
@@ -43,6 +44,7 @@
             <field name="largeur"/>
             <field name="hauteur"/>
             <field name="confort"/>
+            <field name="marque_id"/>
           </group>
         </form>
       </field>

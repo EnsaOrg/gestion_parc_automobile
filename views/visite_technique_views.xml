@@ -11,6 +11,7 @@
           <field name="prestataire"/>
           <field name="duree"/>
           <field name="certificat"/>
+          <field name="vehicule_id"/>
         </tree>
       </field>
     </record>
@@ -27,6 +28,7 @@
             <field name="prestataire"/>
             <field name="duree"/>
             <field name="certificat"/>
+            <field name="vehicule_id"/>
           </group>
         </form>
       </field>

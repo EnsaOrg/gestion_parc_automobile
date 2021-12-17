@@ -13,7 +13,9 @@ class ParcAutomobileAffectation(models.Model):
 
      vehicule_id = fields.Many2one(comodel_name='parc_automobile.vehicule', delegate=True)
 
-     # affectation_ids = fields.Many2many(comodel_name='university.affectation',
-     #                                  relation='affectation_conducteur_rel',
-     #                                  column1='date_debut',
-     #                                  column2='matricule')
+
+
+     conducteur_ids = fields.Many2many(comodel_name='parc_automobile.conducteur',
+                                       relation='conducteur_affectation_rel',
+                                       column1='matricule',
+                                       column2='date_debut')

@@ -40,7 +40,7 @@
     <!-- actions opening views on models -->
 
     <record model="ir.actions.act_window" id="parc_automobile_action_window">
-      <field name="name">Parc automobile Window</field>
+      <field name="name">Parcs automobile</field>
       <field name="res_model">parc_automobile.parc_automobile</field>
       <field name="view_mode">tree,form</field>
     </record>

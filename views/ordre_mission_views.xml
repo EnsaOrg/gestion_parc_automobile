@@ -39,7 +39,7 @@
     <!-- actions opening views on models -->
 
     <record model="ir.actions.act_window" id="ordre_mission_action_window">
-      <field name="name">Ordre de mission Window</field>
+      <field name="name">Ordres de mission</field>
       <field name="res_model">parc_automobile.ordre_mission</field>
       <field name="view_mode">tree,form</field>
     </record>

@@ -49,7 +49,7 @@
     <!-- actions opening views on models -->
 
     <record model="ir.actions.act_window" id="affectation_action_window">
-      <field name="name">Affectation Window</field>
+      <field name="name">Les affectations</field>
       <field name="res_model">parc_automobile.affectation</field>
       <field name="view_mode">tree,form</field>
     </record>

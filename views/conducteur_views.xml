@@ -50,7 +50,7 @@
     <!-- actions opening views on models -->
 
     <record model="ir.actions.act_window" id="conducteur_action_window">
-      <field name="name">Conducteur Window</field>
+      <field name="name">Conducteurs</field>
       <field name="res_model">parc_automobile.conducteur</field>
       <field name="view_mode">tree,form</field>
     </record>

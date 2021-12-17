@@ -45,7 +45,7 @@
     <!-- actions opening views on models -->
 
     <record model="ir.actions.act_window" id="fournisseur_action_window">
-      <field name="name">Fournisseur Window</field>
+      <field name="name">Fournisseurs</field>
       <field name="res_model">parc_automobile.fournisseur</field>
       <field name="view_mode">tree,form</field>
     </record>

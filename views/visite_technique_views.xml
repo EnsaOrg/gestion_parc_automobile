@@ -37,7 +37,7 @@
     <!-- actions opening views on models -->
 
     <record model="ir.actions.act_window" id="visite_technique_action_window">
-      <field name="name">Visite technique Window</field>
+      <field name="name">Visites technique</field>
       <field name="res_model">parc_automobile.visite_technique</field>
       <field name="view_mode">tree,form</field>
     </record>

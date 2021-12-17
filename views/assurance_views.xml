@@ -44,7 +44,7 @@
     <!-- actions opening views on models -->
 
     <record model="ir.actions.act_window" id="assurance_action_window">
-      <field name="name">Assurance Window</field>
+      <field name="name">Assurances</field>
       <field name="res_model">parc_automobile.assurance</field>
       <field name="view_mode">tree,form</field>
     </record>

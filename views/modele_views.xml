@@ -62,7 +62,7 @@
     <!-- actions opening views on models -->
 
     <record model="ir.actions.act_window" id="modele_action_window">
-      <field name="name">Modele Window</field>
+      <field name="name">Modeles</field>
       <field name="res_model">parc_automobile.modele</field>
       <field name="view_mode">tree,form</field>
     </record>

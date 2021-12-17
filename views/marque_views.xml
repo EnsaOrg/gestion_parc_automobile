@@ -26,9 +26,6 @@
               </group>
             </group>
             <notebook>
-              <page string="Les marques">
-                <field name="vehicule_ids"/>
-              </page>
               <page string="Les modèles">
                 <field name="modele_ids"/>
               </page>

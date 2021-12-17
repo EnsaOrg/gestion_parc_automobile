@@ -14,7 +14,7 @@
           <field name="vitesse_maximale"/>
           <field name="consommation_moyenne"/>
           <field name="capacite_coffre"/>
-          <field name="sexe"/>
+          <field name="boite_vitesse"/>
           <field name="longueur"/>
           <field name="largeur"/>
           <field name="hauteur"/>
@@ -39,7 +39,7 @@
             <field name="vitesse_maximale"/>
             <field name="consommation_moyenne"/>
             <field name="capacite_coffre"/>
-            <field name="sexe"/>
+            <field name="boite_vitesse"/>
             <field name="longueur"/>
             <field name="largeur"/>
             <field name="hauteur"/>

@@ -9,7 +9,6 @@
           <field name="date_debut"/>
           <field name="date_fin_prevue"/>
           <field name="date_fin_reelle"/>
-          <field name="activite"/>
           <field name="region"/>
           <field name="secteur"/>
           <field name="direction"/>
@@ -30,7 +29,6 @@
                   <field name="date_debut"/>
                   <field name="date_fin_prevue"/>
                   <field name="date_fin_reelle"/>
-                  <field name="activite"/>
                   <field name="region"/>
                   <field name="secteur"/>
                   <field name="direction"/>

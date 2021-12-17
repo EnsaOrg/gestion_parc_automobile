@@ -6,7 +6,6 @@ class ParcAutomobileAffectation(models.Model):
      date_debut = fields.Date('Date de début')
      date_fin_prevue = fields.Date('Date de fin prévue')
      date_fin_reelle = fields.Date('Date de fin réelle')
-     activite = fields.Char('Activite')
      region = fields.Char('Région')
      secteur = fields.Char('Secteur')
      direction = fields.Char('Direction')
@@ -18,4 +17,12 @@ class ParcAutomobileAffectation(models.Model):
      conducteur_ids = fields.Many2many(comodel_name='parc_automobile.conducteur',
                                        relation='conducteur_affectation_rel',
                                        column1='matricule',
-                                       column2='date_debut')
+                                       column2='date_debut',required=True)
+
+     @api.multi
+     def name_get(self):
+         result = []
+         for affectation in self:
+             name = '[Date: ' + affectation.date_debut + ' - Activité: ' + affectation.activite + ']'
+             result.append((affectation.id, name))
+         return result

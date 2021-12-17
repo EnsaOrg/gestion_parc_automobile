@@ -62,11 +62,11 @@
 
     <!-- menu categories -->
 
-    <menuitem name="Affectation" id="parc_automobile_affectation_cat" parent="parc_automobile.menu_root"/>
+    <menuitem name="Affectation" id="parc_automobile_conducteur_cat" parent="parc_automobile.menu_root"/>
 
     <!-- actions -->
 
-    <menuitem name="List of affectations" id="parc_automobile_affectation_list" parent="parc_automobile_affectation_cat"
+    <menuitem name="Les affectations" id="parc_automobile_affectation_list" parent="parc_automobile_conducteur_cat"
               action="affectation_action_window"/>
 <!--    <menuitem name="Server to list" id="parc_automobile" parent="parc_automobile.menu_2"-->
 <!--              action="parc_automobile.action_server"/>-->

@@ -41,6 +41,7 @@
         'views/taux_immobilisation_views.xml',
         'views/trajet_views.xml',
         'views/visite_technique_views.xml',
+        'views/affectation_views.xml',
         # 'views/intervention_views.xml',
         # 'views/acquisition_views.xml',
     ],

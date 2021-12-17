@@ -3,10 +3,9 @@ from odoo import models, fields, api
 class ParcAutomobileConducteur(models.Model):
      _name = 'parc_automobile.conducteur'
 
-     matricule = fields.Char('Matricule')
+     num_permis = fields.Integer()
      nom = fields.Char('Nom')
      prenom = fields.Char('Prénom')
-     num_permis = fields.Integer()
      service = fields.Char('Service')
      departement = fields.Char('Département')
      type_permis = fields.Selection([('A','A'),('A1','A1'),('A2','A2'),

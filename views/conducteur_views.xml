@@ -6,7 +6,6 @@
       <field name="model">parc_automobile.conducteur</field>
       <field name="arch" type="xml">
         <tree>
-          <field name="matricule"/>
           <field name="nom"/>
           <field name="prenom"/>
           <field name="num_permis"/>
@@ -28,7 +27,6 @@
           <sheet>
               <group>
                 <group>
-                  <field name="matricule"/>
                   <field name="nom"/>
                   <field name="prenom"/>
                   <field name="num_permis"/>

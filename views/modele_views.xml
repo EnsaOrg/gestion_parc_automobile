@@ -40,6 +40,8 @@
                 <field name="nbr_porte"/>
                 <field name="vitesse_maximale"/>
                 <field name="consommation_moyenne"/>
+              </group>
+              <group>
                 <field name="capacite_coffre"/>
                 <field name="boite_vitesse"/>
                 <field name="longueur"/>

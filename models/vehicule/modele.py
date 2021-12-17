@@ -14,10 +14,10 @@ class ParcAutomobileModele(models.Model):
      vitesse_maximale = fields.Integer()
      consommation_moyenne = fields.Integer()
      capacite_coffre = fields.Integer()
-     sexe = fields.Selection([('manuelle','Manuelle'),('automatique','Automatique')])
-     longueur = fields.Float();
-     largeur = fields.Float();
-     hauteur = fields.Float();
+     boite_vitesse = fields.Selection([('manuelle','Manuelle'),('automatique','Automatique')])
+     longueur = fields.Float()
+     largeur = fields.Float()
+     hauteur = fields.Float()
      confort = fields.Selection([('faible','faible'),('moyen','Moyen'),('luxe','Luxe')])
 
      marque_id = fields.Many2one(comodel_name='parc_automobile.marque', delegate=True, required=True)

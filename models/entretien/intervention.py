@@ -8,4 +8,4 @@ class ParcAutomobileIntervention(models.Model):
      prestataire = fields.Char()
      duree = fields.Integer()
 
-     vehicule_id = fields.Many2one(comodel_name='parc_automobile.vehicule', delegate=True)
+     vehicule_id = fields.Many2one(comodel_name='parc_automobile.vehicule', delegate=True, required=True)

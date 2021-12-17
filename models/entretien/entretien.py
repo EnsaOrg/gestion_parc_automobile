@@ -12,4 +12,4 @@ class ParcAutomobileEntretien(models.Model):
 
      type = fields.Selection([('entretien courant', 'Entretien courant'), ('révision', 'Révision'), ('réparation', 'Réparation'),])
 
-     vehicule_id = fields.Many2one(comodel_name='parc_automobile.vehicule', delegate=True)
+     vehicule_id = fields.Many2one(comodel_name='parc_automobile.vehicule', delegate=True, required=True)

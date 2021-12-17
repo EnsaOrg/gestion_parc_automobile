@@ -9,4 +9,4 @@ class ParcAutomobileAchat(models.Model):
      montant = fields.Float()
      motif = fields.Text('Address')
 
-     fournisseur_id = fields.Many2one(comodel_name='parc_automobile.fournisseur', delegate=True)
+     fournisseur_id = fields.Many2one(comodel_name='parc_automobile.fournisseur', delegate=True, required=True)

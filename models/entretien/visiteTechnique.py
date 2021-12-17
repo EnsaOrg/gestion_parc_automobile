@@ -12,4 +12,4 @@ class ParcAutomobileVisiteTechnique(models.Model):
 
      certificat = fields.Selection([('a', 'A'), ('s', 'S')])
 
-     vehicule_id = fields.Many2one(comodel_name='parc_automobile.vehicule', delegate=True)
+     vehicule_id = fields.Many2one(comodel_name='parc_automobile.vehicule', delegate=True, required=True)

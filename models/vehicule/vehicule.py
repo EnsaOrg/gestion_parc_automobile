@@ -11,6 +11,6 @@ class ParcAutomobileVehicule(models.Model):
      kilometrage = fields.Integer()
      couleur = fields.Char('Couleur')
 
-     marque_id = fields.Many2one(comodel_name='parc_automobile.marque', delegate=True)
-     parc_id = fields.Many2one(comodel_name='parc_automobile.parc_automobile', delegate=True)
-     assurance_id = fields.Many2one(comodel_name='parc_automobile.assurance', delegate=True)
+     marque_id = fields.Many2one(comodel_name='parc_automobile.marque', delegate=True, required=True)
+     parc_id = fields.Many2one(comodel_name='parc_automobile.parc_automobile', delegate=True, required=True)
+     assurance_id = fields.Many2one(comodel_name='parc_automobile.assurance', delegate=True, required=True)

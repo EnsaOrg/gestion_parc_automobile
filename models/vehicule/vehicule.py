@@ -16,6 +16,10 @@ class ParcAutomobileVehicule(models.Model):
      parc_id = fields.Many2one(comodel_name='parc_automobile.parc_automobile', delegate=True, required=True)
      assurance_id = fields.Many2one(comodel_name='parc_automobile.assurance', delegate=True, required=True)
 
+     _sql_constraints = [
+          ('matricule', 'unique(matricule)', 'Le matricule existe déjà!'),
+     ]
+
      @api.multi
      def name_get(self):
           result = []

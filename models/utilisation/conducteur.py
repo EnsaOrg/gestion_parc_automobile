@@ -20,6 +20,10 @@ class ParcAutomobileConducteur(models.Model):
                                         column1='date_debut',
                                         column2='matricule')
 
+     _sql_constraints = [
+         ('num_permis', 'unique(num_permis)', 'Le matricule existe déjà!'),
+     ]
+
      @api.multi
      def name_get(self):
          result = []

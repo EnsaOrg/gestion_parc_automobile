@@ -13,6 +13,10 @@ class ParcAutomobileOrdreMission(models.Model):
      trajet_id = fields.Many2one(comodel_name='parc_automobile.trajet', delegate=True)
      affectation_id = fields.Many2one(comodel_name='parc_automobile.affectation', delegate=True)
 
+     _sql_constraints = [
+          ('autorisation', 'unique(autorisation)', 'Existe déjà!'),
+     ]
+
      @api.multi
      def name_get(self):
           result = []

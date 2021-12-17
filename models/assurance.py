@@ -11,3 +11,7 @@ class ParcAutomobileAssurance(models.Model):
      prime_totale = fields.Float()
 
      vehicule_ids = fields.One2many(comodel_name='parc_automobile.vehicule', inverse_name='assurance_id')
+
+     _sql_constraints = [
+          ('nom_assurance', 'unique(nom_assurance)', 'Existe déjà!'),
+     ]

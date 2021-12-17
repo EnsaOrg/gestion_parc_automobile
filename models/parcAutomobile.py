@@ -9,6 +9,10 @@ class ParcAutomobileParcAutomobile(models.Model):
 
      vehicule_ids = fields.One2many(comodel_name='parc_automobile.vehicule', inverse_name='parc_id')
 
+     _sql_constraints = [
+          ('num_parc', 'unique(num_parc)', 'Existe déjà!'),
+     ]
+
      @api.multi
      def name_get(self):
           result = []

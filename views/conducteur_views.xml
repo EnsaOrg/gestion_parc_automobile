@@ -25,17 +25,26 @@
       <field name="model">parc_automobile.conducteur</field>
       <field name="arch" type="xml">
         <form>
-          <group>
-            <field name="matricule"/>
-            <field name="nom"/>
-            <field name="prenom"/>
-            <field name="num_permis"/>
-            <field name="service"/>
-            <field name="departement"/>
-            <field name="type_permis"/>
-            <field name="ordre"/>
-            <field name="validite_permis"/>
-          </group>
+          <sheet>
+              <group>
+                <group>
+                  <field name="matricule"/>
+                  <field name="nom"/>
+                  <field name="prenom"/>
+                  <field name="num_permis"/>
+                  <field name="service"/>
+                  <field name="departement"/>
+                  <field name="type_permis"/>
+                  <field name="ordre"/>
+                  <field name="validite_permis"/>
+                </group>
+              </group>
+              <notebook>
+                <page string="Les affectations">
+                  <field name="affectation_ids"/>
+                </page>
+              </notebook>
+          </sheet>
         </form>
       </field>
     </record>

@@ -24,16 +24,26 @@
       <field name="model">parc_automobile.affectation</field>
       <field name="arch" type="xml">
         <form>
-          <group>
-            <field name="date_debut"/>
-            <field name="date_fin_prevue"/>
-            <field name="date_fin_reelle"/>
-            <field name="activite"/>
-            <field name="region"/>
-            <field name="secteur"/>
-            <field name="direction"/>
-            <field name="vehicule_id"/>
-          </group>
+          <sheet>
+              <group>
+                <group>
+                  <field name="date_debut"/>
+                  <field name="date_fin_prevue"/>
+                  <field name="date_fin_reelle"/>
+                  <field name="activite"/>
+                  <field name="region"/>
+                  <field name="secteur"/>
+                  <field name="direction"/>
+                  <field name="vehicule_id"/>
+                </group>
+              </group>
+            <notebook>
+              <page string="Les chauffeurs">
+              <field name="conducteur_ids"/>
+            </page>
+            </notebook>
+
+          </sheet>
         </form>
       </field>
     </record>

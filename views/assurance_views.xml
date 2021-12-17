@@ -21,13 +21,22 @@
       <field name="model">parc_automobile.assurance</field>
       <field name="arch" type="xml">
         <form>
-          <group>
-            <field name="nom_assurance"/>
-            <field name="num_agence"/>
-            <field name="date_debut"/>
-            <field name="date_fin"/>
-            <field name="prime_totale"/>
-          </group>
+          <sheet>
+            <group>
+              <group>
+                <field name="nom_assurance"/>
+                <field name="num_agence"/>
+                <field name="date_debut"/>
+                <field name="date_fin"/>
+                <field name="prime_totale"/>
+              </group>
+            </group>
+            <notebook>
+              <page string="Les véhicules">
+                <field name="vehicule_ids"/>
+              </page>
+            </notebook>
+          </sheet>
         </form>
       </field>
     </record>

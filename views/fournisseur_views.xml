@@ -20,12 +20,24 @@
       <field name="model">parc_automobile.fournisseur</field>
       <field name="arch" type="xml">
         <form>
-          <group>
-            <field name="registre_commerce"/>
-            <field name="date_enregistrement"/>
-            <field name="adresse"/>
-            <field name="type"/>
-          </group>
+          <sheet>
+            <group>
+             <group>
+                <field name="registre_commerce"/>
+                <field name="date_enregistrement"/>
+                <field name="adresse"/>
+                <field name="type"/>
+             </group>
+            </group>
+            <notebook>
+              <page string="Les achats">
+                <field name="achat_ids"/>
+              </page>
+              <page string="Les locations">
+                <field name="location_ids"/>
+              </page>
+            </notebook>
+          </sheet>
         </form>
       </field>
     </record>

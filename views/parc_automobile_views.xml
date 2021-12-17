@@ -19,11 +19,20 @@
       <field name="model">parc_automobile.parc_automobile</field>
       <field name="arch" type="xml">
         <form>
-          <group>
-            <field name="num_parc"/>
-            <field name="capacite"/>
-            <field name="localisation"/>
-          </group>
+          <sheet>
+            <group>
+              <group>
+                <field name="num_parc"/>
+                <field name="capacite"/>
+                <field name="localisation"/>
+              </group>
+            </group>
+            <notebook>
+              <page string="Les véhicules">
+                <field name="vehicule_ids"/>
+              </page>
+            </notebook>
+          </sheet>
         </form>
       </field>
     </record>

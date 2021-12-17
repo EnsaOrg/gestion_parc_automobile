@@ -9,3 +9,6 @@ class ParcAutomobileOrdreMission(models.Model):
      pointage = fields.Boolean()
      activite = fields.Selection([('administrative', 'Administrative'), ('logistique', 'Logistique'),
                                   ('commerciale', 'Commerciale'), ('autre', 'Autre')])
+
+     trajet_id = fields.Many2one(comodel_name='parc_automobile.trajet', delegate=True)
+     affectation_id = fields.Many2one(comodel_name='parc_automobile.affectation', delegate=True)

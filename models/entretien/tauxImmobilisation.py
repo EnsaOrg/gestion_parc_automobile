@@ -10,3 +10,5 @@ class ParcAutomobileTauxImmobilisation(models.Model):
      prestataire = fields.Char()
      duree = fields.Integer()
      nbr_heure = fields.Integer()
+
+     vehicule_id = fields.Many2one(comodel_name='parc_automobile.vehicule', delegate=True)

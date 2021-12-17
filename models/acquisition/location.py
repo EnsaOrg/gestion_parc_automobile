@@ -10,3 +10,5 @@ class ParcAutomobileLocation(models.Model):
      motif = fields.Text('Address')
      #durée en heure
      duree = fields.Integer()
+
+     fournisseur_id = fields.Many2one(comodel_name='parc_automobile.fournisseur', delegate=True)

@@ -19,3 +19,5 @@ class ParcAutomobileModele(models.Model):
      largeur = fields.Float();
      hauteur = fields.Float();
      confort = fields.Selection([('faible','faible'),('moyen','Moyen'),('luxe','Luxe')])
+
+     marque_id = fields.Many2one(comodel_name='parc_automobile.marque', delegate=True)

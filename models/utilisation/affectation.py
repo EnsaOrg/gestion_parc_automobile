@@ -11,6 +11,8 @@ class ParcAutomobileAffectation(models.Model):
      secteur = fields.Char('Secteur')
      direction = fields.Char('Direction')
 
+     vehicule_id = fields.Many2one(comodel_name='parc_automobile.vehicule', delegate=True)
+
      # affectation_ids = fields.Many2many(comodel_name='university.affectation',
      #                                  relation='affectation_conducteur_rel',
      #                                  column1='date_debut',

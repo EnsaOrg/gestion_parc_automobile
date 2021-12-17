@@ -11,3 +11,5 @@ class ParcAutomobileEntretien(models.Model):
      duree = fields.Integer()
 
      type = fields.Selection([('entretien courant', 'Entretien courant'), ('révision', 'Révision'), ('réparation', 'Réparation'),])
+
+     vehicule_id = fields.Many2one(comodel_name='parc_automobile.vehicule', delegate=True)

@@ -30,22 +30,31 @@
       <field name="model">parc_automobile.modele</field>
       <field name="arch" type="xml">
         <form>
-          <group>
-            <field name="version"/>
-            <field name="puissance"/>
-            <field name="energie"/>
-            <field name="nbr_place"/>
-            <field name="nbr_porte"/>
-            <field name="vitesse_maximale"/>
-            <field name="consommation_moyenne"/>
-            <field name="capacite_coffre"/>
-            <field name="boite_vitesse"/>
-            <field name="longueur"/>
-            <field name="largeur"/>
-            <field name="hauteur"/>
-            <field name="confort"/>
-            <field name="marque_id"/>
-          </group>
+          <sheet>
+            <group>
+              <group>
+                <field name="version"/>
+                <field name="puissance"/>
+                <field name="energie"/>
+                <field name="nbr_place"/>
+                <field name="nbr_porte"/>
+                <field name="vitesse_maximale"/>
+                <field name="consommation_moyenne"/>
+                <field name="capacite_coffre"/>
+                <field name="boite_vitesse"/>
+                <field name="longueur"/>
+                <field name="largeur"/>
+                <field name="hauteur"/>
+                <field name="confort"/>
+                <field name="marque_id"/>
+              </group>
+            </group>
+            <notebook>
+              <page string="Les véhicules">
+                <field name="vehicule_ids"/>
+              </page>
+            </notebook>
+          </sheet>
         </form>
       </field>
     </record>

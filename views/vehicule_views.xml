@@ -13,6 +13,7 @@
           <field name="kilometrage"/>
           <field name="couleur"/>
           <field name="marque_id"/>
+          <field name="modele_id"/>
           <field name="parc_id"/>
           <field name="assurance_id"/>
         </tree>
@@ -33,6 +34,7 @@
             <field name="kilometrage"/>
             <field name="couleur"/>
             <field name="marque_id"/>
+            <field name="modele_id"/>
             <field name="parc_id"/>
             <field name="assurance_id"/>
           </group>

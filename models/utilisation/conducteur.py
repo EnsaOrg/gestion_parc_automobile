@@ -14,6 +14,7 @@ class ParcAutomobileConducteur(models.Model):
                                      ('D','D'),('D1','D1'),('D1E','D1E'),('DE','DE')])
      ordre = fields.Selection([('principal','Principal'),('secondaire','Secondaire')])
      validite_permis = fields.Date('Date d\'expiration')
+     active = fields.Boolean()
 
      affectation_ids = fields.Many2many(comodel_name='parc_automobile.affectation',
                                         relation='affectation_conducteur_rel',

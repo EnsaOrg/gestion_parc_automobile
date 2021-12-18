@@ -24,6 +24,10 @@
                 <field name="nom"/>
                 <field name="type"/>
               </group>
+              <group>
+                <field name="nbr_modele"/>
+                <field name="nbr_vehicule"/>
+              </group>
             </group>
             <notebook>
               <page string="Les véhicules">

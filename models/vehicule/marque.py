@@ -13,3 +13,14 @@ class ParcAutomobileMarque(models.Model):
 
      vehicule_ids = fields.One2many(comodel_name='parc_automobile.vehicule', inverse_name='marque_id')
      modele_ids = fields.One2many(comodel_name='parc_automobile.modele', inverse_name='marque_id')
+
+     nbr_modele = fields.Integer(string="Nombre de modèles", compute='comp_modele')
+     nbr_vehicule = fields.Integer(string="Nombre de véhicules", compute='comp_vehicule')
+
+     @api.one
+     def comp_modele(self):
+         self.nbr_modele = len(self.modele_ids)
+
+     @api.one
+     def comp_vehicule(self):
+         self.nbr_vehicule = len(self.vehicule_ids)

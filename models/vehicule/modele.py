@@ -24,7 +24,7 @@ class ParcAutomobileModele(models.Model):
 
      vehicule_ids = fields.One2many(comodel_name='parc_automobile.vehicule', inverse_name='marque_id')
 
-     nbr_vehicule = fields.Integer(String="Nombre de véhicules", compute='comp_vehicule')
+     nbr_vehicule = fields.Integer(string="Nombre de véhicules", compute='comp_vehicule')
 
      @api.one
      def comp_vehicule(self):

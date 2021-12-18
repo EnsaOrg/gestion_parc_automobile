@@ -32,7 +32,7 @@ class ParcAutomobileConducteur(models.Model):
              result.append((conducteur.id, name))
          return result
 
-     nbr_affectation = fields.Integer(String="Nombre de véhicules", compute='comp_affectation')
+     nbr_affectation = fields.Integer(string="Nombre de véhicules", compute='comp_affectation')
 
      @api.one
      def comp_affectation(self):

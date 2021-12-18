@@ -22,7 +22,7 @@ class ParcAutomobileParcAutomobile(models.Model):
 
           return result
 
-     nbr_vehicule = fields.Integer(String="Nombre de véhicules", compute='comp_vehicule')
+     nbr_vehicule = fields.Integer(string="Nombre de véhicules", compute='comp_vehicule')
 
      @api.one
      def comp_vehicule(self):

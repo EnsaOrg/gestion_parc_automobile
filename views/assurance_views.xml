@@ -27,8 +27,11 @@
                 <field name="nom_assurance"/>
                 <field name="num_agence"/>
                 <field name="date_debut"/>
+              </group>
+              <group>
                 <field name="date_fin"/>
                 <field name="prime_totale"/>
+                <field name="nbr_vehicule"/>
               </group>
             </group>
             <notebook>

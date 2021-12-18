@@ -15,7 +15,7 @@ class ParcAutomobileConducteur(models.Model):
      ordre = fields.Selection([('principal','Principal'),('secondaire','Secondaire')])
      validite_permis = fields.Date('Date d\'expiration')
 
-     affectation_ids = fields.Many2many(comodel_name='parc_automobile.conducteur',
+     affectation_ids = fields.Many2many(comodel_name='parc_automobile.affectation',
                                         relation='affectation_conducteur_rel',
                                         column1='date_debut',
                                         column2='matricule')
@@ -31,3 +31,9 @@ class ParcAutomobileConducteur(models.Model):
              name = '[Prénom: ' + conducteur.prenom + ' - Nom: ' + conducteur.nom + ']'
              result.append((conducteur.id, name))
          return result
+
+     nbr_affectation = fields.Integer(String="Nombre de véhicules", compute='comp_affectation')
+
+     @api.one
+     def comp_affectation(self):
+         self.nbr_affectation = len(self.affectation_ids)

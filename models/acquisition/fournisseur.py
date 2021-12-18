@@ -19,3 +19,9 @@ class ParcAutomobileFournisseur(models.Model):
                name = '[Régistre de commerce: ' + fournisseur.registre_commerce + ' - Type: ' + fournisseur.type + ']'
                result.append((fournisseur.id, name))
           return result
+
+     nbr_vehicule = fields.Integer(String="Nombre de véhicules", compute='comp_vehicule')
+
+     @api.one
+     def comp_vehicule(self):
+          self.nbr_vehicule = len(self.achat_ids) + len(self.location_ids)

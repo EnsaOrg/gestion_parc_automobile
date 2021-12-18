@@ -32,9 +32,12 @@
                   <field name="num_permis"/>
                   <field name="service"/>
                   <field name="departement"/>
+                </group>
+                <group>
                   <field name="type_permis"/>
                   <field name="ordre"/>
                   <field name="validite_permis"/>
+                  <field name="nbr_affectation"/>
                 </group>
               </group>
               <notebook>

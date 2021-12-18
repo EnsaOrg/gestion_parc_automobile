@@ -24,7 +24,10 @@
               <group>
                 <field name="num_parc"/>
                 <field name="capacite"/>
+              </group>
+              <group>
                 <field name="localisation"/>
+                <field name="nbr_vehicule"/>
               </group>
             </group>
             <notebook>

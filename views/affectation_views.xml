@@ -30,9 +30,12 @@
                   <field name="date_fin_prevue"/>
                   <field name="date_fin_reelle"/>
                   <field name="region"/>
+                </group>
+                <group>
                   <field name="secteur"/>
                   <field name="direction"/>
                   <field name="vehicule_id"/>
+                  <field name="nbr_conducteur"/>
                 </group>
               </group>
             <notebook>

@@ -26,8 +26,11 @@
                 <field name="registre_commerce"/>
                 <field name="date_enregistrement"/>
                 <field name="adresse"/>
-                <field name="type"/>
              </group>
+              <group>
+                <field name="type"/>
+                <field name="nbr_vehicule"/>
+              </group>
             </group>
             <notebook>
               <page string="Les achats">

@@ -24,6 +24,12 @@ class ParcAutomobileModele(models.Model):
 
      vehicule_ids = fields.One2many(comodel_name='parc_automobile.vehicule', inverse_name='marque_id')
 
+     nbr_vehicule = fields.Integer(String="Nombre de véhicules", compute='comp_vehicule')
+
+     @api.one
+     def comp_vehicule(self):
+          self.nbr_vehicule = len(self.vehicule_ids)
+
      @api.multi
      def name_get(self):
           result = []

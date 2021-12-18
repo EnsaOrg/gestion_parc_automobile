@@ -49,6 +49,7 @@
                 <field name="hauteur"/>
                 <field name="confort"/>
                 <field name="marque_id"/>
+                <field name="nbr_vehicule"/>
               </group>
             </group>
             <notebook>

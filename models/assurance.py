@@ -15,3 +15,9 @@ class ParcAutomobileAssurance(models.Model):
      _sql_constraints = [
           ('nom_assurance', 'unique(nom_assurance)', 'Existe déjà!'),
      ]
+
+     nbr_vehicule = fields.Integer(String="Nombre de véhicules", compute='comp_vehicule')
+
+     @api.one
+     def comp_vehicule(self):
+          self.nbr_vehicule = len(self.vehicule_ids)

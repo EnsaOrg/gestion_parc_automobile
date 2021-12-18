@@ -21,3 +21,9 @@ class ParcAutomobileParcAutomobile(models.Model):
                result.append((parc.id, name))
 
           return result
+
+     nbr_vehicule = fields.Integer(String="Nombre de véhicules", compute='comp_vehicule')
+
+     @api.one
+     def comp_vehicule(self):
+          self.nbr_vehicule = len(self.vehicule_ids)

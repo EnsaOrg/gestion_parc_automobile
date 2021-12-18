@@ -12,8 +12,6 @@ class ParcAutomobileAffectation(models.Model):
 
      vehicule_id = fields.Many2one(comodel_name='parc_automobile.vehicule', delegate=True, required=True)
 
-
-
      conducteur_ids = fields.Many2many(comodel_name='parc_automobile.conducteur',
                                        relation='conducteur_affectation_rel',
                                        column1='matricule',
@@ -26,3 +24,9 @@ class ParcAutomobileAffectation(models.Model):
              name = '[Date: ' + str(affectation.date_debut) + ' - Activité: ' + str(affectation.vehicule_id.matricule) + ']'
              result.append((affectation.id, name))
          return result
+
+     nbr_conducteur = fields.Integer(String="Nombre de véhicules", compute='comp_conducteur')
+
+     @api.one
+     def comp_conducteur(self):
+         self.nbr_conducteur = len(self.conducteur_ids)

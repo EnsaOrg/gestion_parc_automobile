@@ -16,7 +16,7 @@ class ParcAutomobileVehicule(models.Model):
      parc_id = fields.Many2one(comodel_name='parc_automobile.parc_automobile', delegate=True, required=True)
      assurance_id = fields.Many2one(comodel_name='parc_automobile.assurance', delegate=True, required=True)
      fournisseur_id = fields.Many2one(comodel_name='parc_automobile.fournisseur', delegate=True, required=True)
-     active = fields.Boolean()
+     active = fields.Boolean(string='Etat',default=True)
 
      _sql_constraints = [
           ('matricule', 'unique(matricule)', 'Le matricule existe déjà!'),

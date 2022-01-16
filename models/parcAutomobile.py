@@ -1,9 +1,9 @@
-from odoo import models, fields, api
+from odoo import models, fields, api, _
 
 class ParcAutomobileParcAutomobile(models.Model):
      _name = 'parc_automobile.parc_automobile'
 
-     num_parc = fields.Integer()
+     num_parc = fields.Char(string='Order Reference', required=True, copy=False, readonly=True, index=True, default=lambda self: _('New'))
      capacite = fields.Integer()
      localisation = fields.Text()
 
@@ -27,3 +27,11 @@ class ParcAutomobileParcAutomobile(models.Model):
      @api.one
      def comp_vehicule(self):
           self.nbr_vehicule = len(self.vehicule_ids)
+
+     @api.model
+     def create(self, vals):
+          if vals.get('num_parc', _('New')) == _('New'):
+               vals['num_parc'] = self.env['ir.sequence'].next_by_code(
+                    'parc_automobile.ordre_mission.sequence') or _('New')
+          result = super(ParcAutomobileParcAutomobile, self).create(vals)
+          return result

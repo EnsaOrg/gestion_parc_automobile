@@ -9,7 +9,7 @@ class ParcAutomobileAchat(models.Model):
      montant = fields.Float()
      motif = fields.Text('Motif')
 
-     fournisseur_id = fields.Many2one(comodel_name='parc_automobile.fournisseur', delegate=True, required=True)
+     vehicule_id = fields.Many2one(comodel_name='parc_automobile.vehicule', delegate=True, required=True)
 
      @api.multi
      def name_get(self):

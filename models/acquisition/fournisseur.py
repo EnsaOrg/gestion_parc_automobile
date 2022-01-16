@@ -8,10 +8,6 @@ class ParcAutomobileFournisseur(models.Model):
      adresse = fields.Char('Adresse')
      type =  fields.Selection([('concessionnaire','Concessionnaire'),('agence de location','Agence de location')])
 
-     #acquisition_ids = fields.One2many(comodel_name='parc_automobile.acquisition', inverse_name='rel_id')
-     achat_ids = fields.One2many(comodel_name='parc_automobile.achat', inverse_name='fournisseur_id')
-     location_ids = fields.One2many(comodel_name='parc_automobile.location', inverse_name='fournisseur_id')
-
      @api.multi
      def name_get(self):
           result = []

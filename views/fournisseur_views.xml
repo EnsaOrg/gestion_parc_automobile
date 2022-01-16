@@ -32,14 +32,6 @@
                 <field name="nbr_vehicule"/>
               </group>
             </group>
-            <notebook>
-              <page string="Les achats">
-                <field name="achat_ids"/>
-              </page>
-              <page string="Les locations">
-                <field name="location_ids"/>
-              </page>
-            </notebook>
           </sheet>
         </form>
       </field>

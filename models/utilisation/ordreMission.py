@@ -1,9 +1,8 @@
-from odoo import models, fields, api
+from odoo import models, fields, api, _
 
 class ParcAutomobileOrdreMission(models.Model):
      _name = 'parc_automobile.ordre_mission'
-
-     autorisation = fields.Integer()
+     autorisation = fields.Char(string='Order Reference', required=True, copy=False, readonly=True, index=True, default=lambda self: _('New'))
      permanence = fields.Boolean()
      deplacement = fields.Boolean()
      pointage = fields.Boolean()
@@ -23,4 +22,11 @@ class ParcAutomobileOrdreMission(models.Model):
           for ordre in self:
                name = '[Autorisation: ' + str(ordre.autorisation) + ' - Activité: ' + str(ordre.activite) + ']'
                result.append((ordre.id, name))
+          return result
+
+     @api.model
+     def create(self, vals):
+          if vals.get('autorisation', _('New')) == _('New'):
+               vals['autorisation'] = self.env['ir.sequence'].next_by_code('parc_automobile.ordre_mission.sequence') or _('New')
+          result = super(ParcAutomobileOrdreMission, self).create(vals)
           return result

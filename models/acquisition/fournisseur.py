@@ -7,7 +7,7 @@ class ParcAutomobileFournisseur(models.Model):
      date_enregistrement = fields.Date('Date enregistrement')
      adresse = fields.Char('Adresse')
      type =  fields.Selection([('concessionnaire','Concessionnaire'),('agence de location','Agence de location')])
-
+     vehicule_ids = fields.One2many(comodel_name='parc_automobile.vehicule', inverse_name='fournisseur_id')
      @api.multi
      def name_get(self):
           result = []
@@ -20,4 +20,4 @@ class ParcAutomobileFournisseur(models.Model):
 
      @api.one
      def comp_vehicule(self):
-          self.nbr_vehicule = len(self.achat_ids) + len(self.location_ids)
+          self.nbr_vehicule = len(self.vehicule_ids)

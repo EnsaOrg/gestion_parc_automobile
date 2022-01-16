@@ -32,6 +32,11 @@
                 <field name="nbr_vehicule"/>
               </group>
             </group>
+            <notebook>
+              <page string="Les véhicules">
+                 <field name="vehicule_ids"/>
+              </page>
+            </notebook>
           </sheet>
         </form>
       </field>

@@ -4,6 +4,7 @@ class ParcAutomobileMarque(models.Model):
      _name = 'parc_automobile.marque'
      _rec_name = 'nom'
 
+     logo = fields.Binary(string='Logo')
      nom = fields.Char('Marque')
      type = fields.Selection([('coupé','Coupé'),('berline','Berline'),('hayon','Hayon'),('break','Break'),
                               ('limousine','Limousine'),('pick-up','Pick-up'),('crossovers','Crossovers'),

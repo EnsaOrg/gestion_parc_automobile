@@ -6,6 +6,7 @@
       <field name="model">parc_automobile.marque</field>
       <field name="arch" type="xml">
         <tree>
+          <field name="logo" widget="image" width="24px" height="24px"/>
           <field name="nom"/>
           <field name="type"/>
         </tree>
@@ -21,6 +22,7 @@
           <sheet>
             <group>
               <group>
+                <field name="logo" widget="image" width="80px" height="80px"/>
                 <field name="nom"/>
                 <field name="type"/>
               </group>

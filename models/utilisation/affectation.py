@@ -39,7 +39,8 @@ class ParcAutomobileAffectation(models.Model):
          if self.state == 'l1':
              return self.write({'state': 'l2'})
          elif self.state == 'l2':
+             self.vehicule_id.kilometrage = (self.trajet_id.distance + self.vehicule_id.kilometrage)
              return self.write({'state': 'l3'})
          elif self.state == 'l3':
              return {'warning': {'title': 'Terminé',
-                                 'message': 'This student has already finished his courses!'}}
+                                 'message': 'Cet affectation est déjà terminée!'}}

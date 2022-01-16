@@ -9,15 +9,16 @@ class ParcAutomobileAffectation(models.Model):
      region = fields.Char('Région')
      secteur = fields.Char('Secteur')
      direction = fields.Char('Direction')
-
      state = fields.Selection([('l1','Programmé'),('l2','En cours'),('l3','Terminé')], default='l1')
 
      vehicule_id = fields.Many2one(comodel_name='parc_automobile.vehicule', delegate=True, required=True)
+     trajet_id = fields.Many2one(comodel_name='parc_automobile.trajet', delegate=True)
 
      conducteur_ids = fields.Many2many(comodel_name='parc_automobile.conducteur',
                                        relation='conducteur_affectation_rel',
                                        column1='matricule',
                                        column2='date_debut',required=True)
+
 
      @api.multi
      def name_get(self):

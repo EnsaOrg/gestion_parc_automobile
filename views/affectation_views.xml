@@ -13,6 +13,7 @@
           <field name="secteur"/>
           <field name="direction"/>
           <field name="vehicule_id"/>
+          <field name="trajet_id"/>
         </tree>
       </field>
     </record>
@@ -39,6 +40,7 @@
                   <field name="secteur"/>
                   <field name="direction"/>
                   <field name="vehicule_id"/>
+                  <field name="trajet_id"/>
                   <field name="nbr_conducteur"/>
                   <field name="state"/>
                 </group>

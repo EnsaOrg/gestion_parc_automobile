@@ -3,7 +3,7 @@
     <data noupdate="1">
 
         <!-- Sequences for sale.order -->
-        <record id="seq_ordre_mission" model="ir.sequence">
+        <record id="seq_parc_automobile" model="ir.sequence">
             <field name="name">Séquence parc automobile</field>
             <field name="code">parc_automobile.parc_automobile.sequence</field>
             <field name="prefix">PARC</field>

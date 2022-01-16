@@ -32,6 +32,6 @@ class ParcAutomobileParcAutomobile(models.Model):
      def create(self, vals):
           if vals.get('num_parc', _('New')) == _('New'):
                vals['num_parc'] = self.env['ir.sequence'].next_by_code(
-                    'parc_automobile.ordre_mission.sequence') or _('New')
+                    'parc_automobile.parc_automobile.sequence') or _('New')
           result = super(ParcAutomobileParcAutomobile, self).create(vals)
           return result

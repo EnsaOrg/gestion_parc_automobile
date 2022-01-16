@@ -15,6 +15,7 @@ class ParcAutomobileVehicule(models.Model):
      modele_id = fields.Many2one(comodel_name='parc_automobile.modele', delegate=True, required=True)
      parc_id = fields.Many2one(comodel_name='parc_automobile.parc_automobile', delegate=True, required=True)
      assurance_id = fields.Many2one(comodel_name='parc_automobile.assurance', delegate=True, required=True)
+     fournisseur_id = fields.Many2one(comodel_name='parc_automobile.fournisseur', delegate=True, required=True)
      active = fields.Boolean()
 
      _sql_constraints = [

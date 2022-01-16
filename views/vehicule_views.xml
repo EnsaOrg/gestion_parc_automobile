@@ -16,6 +16,7 @@
           <field name="modele_id"/>
           <field name="parc_id"/>
           <field name="assurance_id"/>
+          <field name="fournisseur_id"/>
           <field name="active"/>
         </tree>
       </field>
@@ -47,6 +48,7 @@
                 <field name="modele_id"/>
                 <field name="parc_id"/>
                 <field name="assurance_id"/>
+                <field name="fournisseur_id"/>
               </group>
             </group>
           </sheet>

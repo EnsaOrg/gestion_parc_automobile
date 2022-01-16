@@ -6,10 +6,10 @@ class ParcAutomobileTauxImmobilisation(models.Model):
      # _description = "Hérite de la classe intervention"
 
      date = fields.Date('Date')
-     montant_frais = fields.Float()
+     montant_frais = fields.Float('Frais (en DH)')
      prestataire = fields.Char()
-     duree = fields.Integer()
-     nbr_heure = fields.Integer()
+     duree = fields.Integer('Durée (en jours)')
+     nbr_heure = fields.Integer('Nombre d\'heures')
 
      vehicule_id = fields.Many2one(comodel_name='parc_automobile.vehicule', delegate=True, required=True)
 

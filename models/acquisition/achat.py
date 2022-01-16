@@ -6,7 +6,7 @@ class ParcAutomobileAchat(models.Model):
      # _description = "Hérite de la classe acquisition"
 
      date = fields.Date('Date d\'achat')
-     montant = fields.Float()
+     montant = fields.Float('Montant (en DH)')
      motif = fields.Text('Motif')
 
      vehicule_id = fields.Many2one(comodel_name='parc_automobile.vehicule', delegate=True, required=True)

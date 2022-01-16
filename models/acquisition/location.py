@@ -6,10 +6,10 @@ class ParcAutomobileLocation(models.Model):
      # _description = "Hérite de la classe acquisition"
 
      date = fields.Date('Date d\'acquisition')
-     montant = fields.Float()
+     montant = fields.Float('Montant (en DH)')
      motif = fields.Text('Motif')
      #durée en heure
-     duree = fields.Integer()
+     duree = fields.Integer('Durée (en jours)')
 
      vehicule_id = fields.Many2one(comodel_name='parc_automobile.vehicule', delegate=True, required=True)
 

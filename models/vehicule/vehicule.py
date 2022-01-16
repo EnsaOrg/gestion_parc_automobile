@@ -8,7 +8,7 @@ class ParcAutomobileVehicule(models.Model):
      chassis = fields.Char('Numéro de chassis')
      date_circulation = fields.Date('Date de circulation')
      date_reforme = fields.Date('Date enregistrement')
-     kilometrage = fields.Integer()
+     kilometrage = fields.Integer('Kilométrage (en km)')
      couleur = fields.Selection([('blanc','Blanc'),('noir','Noir'),('argent','Argent'),('gris','Gris'),('rouge','Rouge'),('jaune','Jaune')])
 
      marque_id = fields.Many2one(comodel_name='parc_automobile.marque', delegate=True, required=True)

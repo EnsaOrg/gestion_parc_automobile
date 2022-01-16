@@ -4,5 +4,5 @@ class ParcAutomobileAcquisition(models.Model):
      _name = 'parc_automobile.acquisition'
 
      date = fields.Date('Date d\'acquisition')
-     montant = fields.Float()
+     montant = fields.Float('Montant (en DH)')
      motif = fields.Text('Address')

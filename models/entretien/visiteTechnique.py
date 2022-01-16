@@ -6,9 +6,9 @@ class ParcAutomobileVisiteTechnique(models.Model):
      # _description = "Hérite de la classe intervention"
 
      date = fields.Date('Date d\'acquisition')
-     montant_frais = fields.Float()
+     montant_frais = fields.Float('Frais (en DH)')
      prestataire = fields.Char()
-     duree = fields.Integer()
+     duree = fields.Integer('Durée (en jours)')
 
      certificat = fields.Selection([('a', 'A'), ('s', 'S')])
 

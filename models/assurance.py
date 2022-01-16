@@ -5,10 +5,10 @@ class ParcAutomobileAssurance(models.Model):
      _rec_name = 'nom_assurance'
 
      nom_assurance = fields.Char('Nom de l\'assurance')
-     num_agence = fields.Integer()
+     num_agence = fields.Integer('Numéro de l\'agence')
      date_debut = fields.Date('Date de début')
      date_fin = fields.Date('Date de fin')
-     prime_totale = fields.Float()
+     prime_totale = fields.Float('Prime totale (en DH)')
 
      vehicule_ids = fields.One2many(comodel_name='parc_automobile.vehicule', inverse_name='assurance_id')
 

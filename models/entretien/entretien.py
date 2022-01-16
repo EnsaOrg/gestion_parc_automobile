@@ -6,9 +6,9 @@ class ParcAutomobileEntretien(models.Model):
      # _description = "Hérite de la classe intervention"
 
      date = fields.Date('Date d\'entretien')
-     montant_frais = fields.Float()
+     montant_frais = fields.Float('Frais (en DH)')
      prestataire = fields.Char()
-     duree = fields.Integer()
+     duree = fields.Integer('Durée (en jours)')
 
      type = fields.Selection([('entretien courant', 'Entretien courant'), ('révision', 'Révision'), ('réparation', 'Réparation'),])
 

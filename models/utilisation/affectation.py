@@ -10,7 +10,7 @@ class ParcAutomobileAffectation(models.Model):
      secteur = fields.Char('Secteur')
      direction = fields.Char('Direction')
 
-     state = fields.Selection([('l1','Programmé'),('l2','En cours'),('l3','Terminé')])
+     state = fields.Selection([('l1','Programmé'),('l2','En cours'),('l3','Terminé')], default='l1')
 
      vehicule_id = fields.Many2one(comodel_name='parc_automobile.vehicule', delegate=True, required=True)
 

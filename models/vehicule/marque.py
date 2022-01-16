@@ -18,6 +18,9 @@ class ParcAutomobileMarque(models.Model):
      nbr_modele = fields.Integer(string="Nombre de modèles", compute='comp_modele')
      nbr_vehicule = fields.Integer(string="Nombre de véhicules", compute='comp_vehicule')
 
+     _sql_constraints = [
+         ('name', 'unique(name)', 'La marque existe déjà!'),
+     ]
      @api.one
      def comp_modele(self):
          self.nbr_modele = len(self.modele_ids)

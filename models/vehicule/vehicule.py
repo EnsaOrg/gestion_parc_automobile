@@ -19,6 +19,7 @@ class ParcAutomobileVehicule(models.Model):
 
      _sql_constraints = [
           ('matricule', 'unique(matricule)', 'Le matricule existe déjà!'),
+          ('carte_grise', 'unique(carte_grise)', 'La carte grise existe déjà!'),
      ]
 
      @api.multi

@@ -13,7 +13,7 @@ class ParcAutomobileAssurance(models.Model):
      vehicule_ids = fields.One2many(comodel_name='parc_automobile.vehicule', inverse_name='assurance_id')
 
      _sql_constraints = [
-          ('nom_assurance', 'unique(nom_assurance)', 'Existe déjà!'),
+          ('nom_assurance', 'unique(nom_assurance)', 'Cette assurance existe déjà!'),
      ]
 
      nbr_vehicule = fields.Integer(String="Nombre de véhicules", compute='comp_vehicule')

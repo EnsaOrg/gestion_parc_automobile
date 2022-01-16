@@ -2,7 +2,7 @@ from odoo import models, fields, api, _
 
 class ParcAutomobileOrdreMission(models.Model):
      _name = 'parc_automobile.ordre_mission'
-     autorisation = fields.Char(string='Order Reference', required=True, copy=False, readonly=True, index=True, default=lambda self: _('New'))
+     autorisation = fields.Char(string='Autorisation', required=True, copy=False, readonly=True, index=True, default=lambda self: _('New'))
      permanence = fields.Boolean()
      deplacement = fields.Boolean()
      pointage = fields.Boolean()

@@ -35,3 +35,10 @@ class ParcAutomobileParcAutomobile(models.Model):
                     'parc_automobile.parc_automobile.sequence') or _('New')
           result = super(ParcAutomobileParcAutomobile, self).create(vals)
           return result
+
+     @api.multi
+     @api.onchange('vehicule_ids')
+     def check_number_of_vehicules(self):
+          if len(self.vehicule_ids) > self.capacite:
+               return {'warning': {'title': 'Problème',
+                                   'message': 'La capacité du parc a été dépassée'}}
